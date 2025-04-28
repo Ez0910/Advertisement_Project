@@ -17,17 +17,29 @@ nav a{
     color:black;
     float:right;
     text-decoration :none;
+    font-family : "Trirong", serif;
+    font-size : 16px;
 }
 nav a:hover{
     background-color:darkorange;
-    color:white;
-    transition:0.5s;
+     transition:0.5s;
+          box-shadow: 0px 0px 5px black;
+          scale:105%;
+          filter:drop-shadow(0px 0px 5px black);
 }
 .banner{
     float:left;
     color: orange;
     padding: 10px 15px;
-    font-size:20px;
+    font-size:22px;
+    font-family :"Trirong";
+}
+.banner:hover{
+    background-color: white;
+    transition:0.5s;
+      box-shadow: 0px 0px 5px gray;
+      scale:105%;
+      filter:drop-shadow(0px 0px 5px black);
 }
 section{
     height :100vh;
@@ -49,25 +61,68 @@ section.home::before{
     opacity :0.6;
 }
 section.home div{
-    text-align : center;
-    color : Black;
+    text-align :center;
+    color : White;
     margin : auto;
-    width : 70%;
+    width : 40%;
     padding : 20px;
     isolation : isolate;
+}
+section.home .welcome{
+    font-size : 30px;
+}
+section.home a {
+    color: white;
+    padding : 10px 20px;
+    text-decoration : none;
+    box-shadow : 0px 0px 3px;
+    border-radius :20px;
 }
 section.about{
     background-color :white;
     height : 600px ;
+    padding-top : 100px;
+}
+section.about div{
+    color:black;
+    text-align : center;
+    margin :auto;
+    width :70%;
+}
+section.about img{
+    height: 200px;
 }
 section.product{
-    background:url("https://www.allrecipes.com/thmb/dc0LSjGBsZ3r4Q7T10SFWZpKMd0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-dairy-products-4x3-e60b0ff22e134b7898e635aaabbe6001.jpg");
+    background:url("https://images.pexels.com/photos/4087610/pexels-photo-4087610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size :cover;
     background-repeat : no-repeat;
     background-attachment :fixed;
-    height : 600px; 
+    height : 1200px; 
 }
-
+section.product .container{
+    justify-content :center;
+    display : flex;
+    flex-wrap : wrap;
+    padding-top : 50px;
+}
+section.product .container .card{
+    background-color : white;
+    text-align :center;
+    padding :5px;
+    width : 200px ;
+    height : 400 px;
+    margin :12px;
+}
+section.product .container .card img{
+    width :100%;
+}
+section.product .container .card a{
+    color : orangered;
+    padding : 5px 20 px;
+    text-decoration :none;
+    box-shadow :0 px 0px 3px;
+    border-radius : 20px;
+}
 section.contact{
     background-color : lightcyan;
     height :600px;

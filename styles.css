@@ -1,22 +1,26 @@
 body{
     margin: 0px;
-    background-color:grey;
 }
 header{
     display:flex;
+    top :0;
+    width : 100%;
     justify-content:space-between;
-    background-color:black;
-    width:100%;
+    background-color:lightyellow;
+    position : fixed ;
+    z-index : 1;
+    color :white;
+    padding : 10px ;
 }
-
 nav a{
-    padding: 10px 15px;
-    color:white;
+    padding: 10px 40px;
+    color:black;
     float:right;
+    text-decoration :none;
 }
 nav a:hover{
-    background-color:grey;
-    color:darkorange;
+    background-color:darkorange;
+    color:white;
     transition:0.5s;
 }
 .banner{
@@ -24,4 +28,51 @@ nav a:hover{
     color: orange;
     padding: 10px 15px;
     font-size:20px;
+}
+section{
+    height :100vh;
+    display :grid;
+    place-items: center;
+    position :relative;
+    background-color : black;
+}
+section.home::before{
+    background:url("https://images.pexels.com/photos/3756498/pexels-photo-3756498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size : cover;
+    background-repeat : no-repeat ;
+    background-attachment : fixed;
+    height : 600px;
+    padding-top :100px;
+    content: '';
+    position : absolute;
+    inset :0;
+    opacity :0.6;
+}
+section.home div{
+    text-align : center;
+    color : Black;
+    margin : auto;
+    width : 70%;
+    padding : 20px;
+    isolation : isolate;
+}
+section.about{
+    background-color :white;
+    height : 600px ;
+}
+section.product{
+    background:url("https://www.allrecipes.com/thmb/dc0LSjGBsZ3r4Q7T10SFWZpKMd0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-dairy-products-4x3-e60b0ff22e134b7898e635aaabbe6001.jpg");
+    background-size :cover;
+    background-repeat : no-repeat;
+    background-attachment :fixed;
+    height : 600px; 
+}
+
+section.contact{
+    background-color : lightcyan;
+    height :600px;
+}
+footer{
+    background-color : lightgoldenrodyellow;
+    height : 50px;
 }

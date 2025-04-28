@@ -22,10 +22,11 @@ nav a{
 }
 nav a:hover{
     background-color:darkorange;
-     transition:0.5s;
-          box-shadow: 0px 0px 5px black;
-          scale:105%;
-          filter:drop-shadow(0px 0px 5px black);
+    transition:0.5s;
+    box-shadow: 0px 0px 5px black;
+    border-radius :20px;
+    scale:105%;
+    filter:drop-shadow(0px 0px 5px black);
 }
 .banner{
     float:left;
@@ -53,7 +54,7 @@ section.home::before{
     background-size : cover;
     background-repeat : no-repeat ;
     background-attachment : fixed;
-    height : 600px;
+    height : 1200px;
     padding-top :100px;
     content: '';
     position : absolute;
@@ -80,7 +81,7 @@ section.home a {
 }
 section.about{
     background-color :white;
-    height : 600px ;
+    height : 850px ;
     padding-top : 100px;
 }
 section.about div{
@@ -92,12 +93,23 @@ section.about div{
 section.about img{
     height: 200px;
 }
-section.product{
+section{
+    height :100vh;
+    display :grid;
+    place-items: center;
+    position :relative;
+    background-color : black;
+}
+section.product::before{
     background:url("https://images.pexels.com/photos/4087610/pexels-photo-4087610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size :cover;
     background-repeat : no-repeat;
     background-attachment :fixed;
     height : 1200px; 
+    content: '';
+    position : absolute;
+    inset :0;
+    opacity :0.8;
 }
 section.product .container{
     justify-content :center;
@@ -108,26 +120,81 @@ section.product .container{
 section.product .container .card{
     background-color : white;
     text-align :center;
-    padding :5px;
+    padding :20px;
     width : 200px ;
-    height : 400 px;
+    height : 500px;
     margin :12px;
+    border: 8px solid sandybrown;
 }
 section.product .container .card img{
     width :100%;
 }
 section.product .container .card a{
     color : orangered;
-    padding : 5px 20 px;
+    padding : 5px 20px;
     text-decoration :none;
-    box-shadow :0 px 0px 3px;
+    box-shadow :0px 0px 3px;
     border-radius : 20px;
+}
+section.product .container .card p{
+    text-align :center;
+}
+.card:hover{
+    box-shadow :0 0 5px black;
+    transition : 1s;
+    filter:drop-shadow(0px 0px 5px black);
+    scale : 110%;
+}
+.card:not(:hover){
+    box-shadow :0 0 0px black;
+    transition :1s;
+    scale : 100%;
 }
 section.contact{
     background-color : lightcyan;
     height :600px;
 }
+section.contact.card{
+     margin :auto;
+     color:white;
+     text-align:center;
+     padding-top :100px;
+     width :400px;
+}
+section.contact .card img{
+    width :200px;
+}
 footer{
     background-color : lightgoldenrodyellow;
     height : 50px;
 }
+footer .medsos{
+    text-align :center;
+    padding-top :10px;
+}
+footer .medsos a{
+    color:black;
+    font-size : 30px;
+    padding :5px 20px ;
+}
+footer .medsos a:hover{
+    background-color:gray;
+    transition:1s;
+    box-shadow: 0px 0px 5px black;
+    scale:105%;
+    filter:drop-shadow(0px 0px 5px black);
+}
+.price{
+    width : flex;
+    height: flex;
+    margin: 0;
+    padding: 5px 10px;
+    color:black;
+    float: center;
+    font-size : 15px ;
+    font-family : "Trirong", serif;
+    box-shadow : 0px 0px 5px;
+    border-color : rgb(182, 176, 150);
+    background-color : orange;
+}
+

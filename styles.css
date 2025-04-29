@@ -9,11 +9,16 @@ header{
     top :0;
     width : 100%;
     justify-content:space-between;
-    background-color:lightyellow;
+    background-color:orange;
     position : fixed ;
     z-index : 1;
     color :white;
     padding : 10px ;
+}
+header img{
+    width :150px;
+    float :left;
+    transform :translateY(-35%);
 }
 nav a{
     padding: 15px 40px;
@@ -24,36 +29,59 @@ nav a{
     font-size : 20px;
 }
 nav a:hover{
-    background-color:darkorange;
-    transition:0.5s;
+    background-color: sandybrown;
     box-shadow: 0px 0px 5px black;
     border-radius :20px;
     scale:105%;
     filter:drop-shadow(0px 0px 5px black);
+    transition :0.5s;
 }
+nav a:not(:hover){
+    border-radius :20px;
+    scale:100%;
+    transition :0.5s;
+}
+
 .banner{
     float:left;
-    color: orange;
+    color: #fada07;
     padding: 10px 15px;
     font-size:40px;
-    font-family: "Darker Grotesque", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
+    font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: 
+    "slnt" -10,
+    "wdth" 133.8,
+    "GRAD" 81,
+    "XOPQ" 141,
+    "XTRA" 517,
+    "YOPQ" 61,
+    "YTAS" 778,
+    "YTDE" -171,
+    "YTFI" 685,
+    "YTLC" 493,
+    "YTUC" 712;
 }
 .banner:hover{
     background-color: orangered;
     transition:0.5s;
-      box-shadow: 0px 0px 5px gray;
+      box-shadow: 0px 0px 4px gray;
       scale:105%;
       filter:drop-shadow(0px 0px 5px black);
       color : white;
+}
+.banner:not(:hover){
+    scale :100%;
+    transition : 0.5s;
+    border-radius : 6px;
 }
 section{
     height :100vh;
     display :grid;
     position :relative;
-    background-color : black;
+    background-color : #bd6f02;
 }
 section.home::before{
     background:url("https://images.pexels.com/photos/3756498/pexels-photo-3756498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -65,7 +93,7 @@ section.home::before{
     content: '';
     position : absolute;
     inset :0;
-    opacity :0.6;
+    opacity :0.4;
 }
 section.home .description{
     text-align :right;
@@ -112,8 +140,15 @@ section.home .order a{
     color:white;
     text-decoration : none;
 }
+.spinning{
+    isolation : isolate;
+    float : left;
+    display: block;
+    margin-left: auto;
+    clear: right;
+}
 section.about{
-    background-color :white;
+    background-color : #edc951;
     height : 850px ;
     padding-top : 100px;
 }
@@ -124,29 +159,77 @@ section.about .aboutbox{
     padding-top : 50px;
 }
 section.about .aboutbox .aboutcards{
-    background-color : yellow;
+    background-color : white;
     text-align :center;
     padding :12px;
     width : 500px;
-    height : 450px;
+    height : 730px;
     margin :20px;
     border-radius :20px;
+    transform :translateY(-7%);
+}
+section.about .aboutbox .aboutcards2{
+    background-color : whitesmoke;
+    text-align :center;
+    padding :12px;
+    width : 500px;
+    height : 550px;
+    margin :20px;
+    border-radius :20px;
+    transform :translateY(22%);
+}
+section.about .aboutbox .aboutcards3{
+    background-color : gainsboro;
+    text-align :center;
+    padding :12px;
+    width : 500px;
+    height : 340px;
+    margin :20px;
+    border-radius :20px;
+    transform :translateY(-13%);
+}
+section.about .aboutbox .aboutcards3 img{
+    width :500px;
+    height : 330px;
+    object-fit :cover;
+    object-position: 100% 0;
+    transform : translateY(19%);
+    border-radius : 12px;
 }
 section.about .aboutbox .aboutinfo{
-    font-family: "Darker Grotesque", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Shippori Antique B1", sans-serif;
     font-weight: 400;
     font-style: normal;
-    text-align :justify;
-    font-size:30px;
+    text-align :left;
+    font-size:20px;
     padding : 30px;
-    padding-top : 60px;
+    padding-top : 120px;
+}
+section.about .aboutbox .aboutinfo2{
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-align :center;
+    font-size:22px;
+    padding : 30px;
+    padding-top : 120px;
+}
+section.about .aboutbox .aboutinfo3{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-style: normal;
+    text-align :right;
+    font-size:22px;
+    padding : 30px;
+    padding-top : 120px;
 }
 section.about .aboutbox .aboutdetail1{
     background-color :orange;
     text-align :center;
     width :440px;
-    height :50px;
+    height :90px;
     border-radius :12px;
     margin-left:27px;
     margin-top:20px;
@@ -156,15 +239,29 @@ section.about .aboutbox .aboutdetail{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size :30px;
-    transform :translateY(-30%);
+    font-size :60px;
+    transform : translateY(-48px);
+}
+section.about .aboutbox .aboutdetail2{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size :60px;
+    transform : translateY(-3px);
+}
+section.about .aboutbox .aboutdetail3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size :60px;
+    transform : translateY(0px);
 }
 section{
     height :100vh;
     display :grid;
     place-items: center;
     position :relative;
-    background-color : black;
+    background-color : #bd6f02;
 }
 section.product::before{
     background:url("https://images.pexels.com/photos/4087610/pexels-photo-4087610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -175,7 +272,7 @@ section.product::before{
     content: '';
     position : absolute;
     inset :0;
-    opacity :0.8;
+    opacity :0.7;
 }
 section.product .container{
     justify-content :center;
@@ -188,7 +285,7 @@ section.product .container .card{
     text-align :center;
     padding :20px;
     width : 200px ;
-    height : 500px;
+    height : 540px;
     margin :12px;
     border: 8px solid sandybrown;
     border-radius :12px;
@@ -205,8 +302,32 @@ section.product .container .card a{
     box-shadow :0px 0px 3px;
     border-radius : 20px;
 }
+section.product .container .card h2{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size :30px;
+    margin-top :10px;
+}
+.price{
+    width : flex;
+    height: flex;
+    margin-bottom : 30px;
+    padding: 5px 10px;
+    color:black;
+    float: center;
+    font-size : 15px ;
+    font-family : "Trirong", serif;
+    box-shadow : 0px 0px 5px;
+    border-color : rgb(182, 176, 150);
+    background-color : orange;
+}
 section.product .container .card p{
     text-align :center;
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 .card:hover{
     box-shadow :0 0 5px black;
@@ -220,7 +341,7 @@ section.product .container .card p{
     scale : 100%;
 }
 section.contact{
-    background-color : lightcyan;
+    background-color : #fcce8e;
     height :600px;
 }
 section.contact.card{
@@ -234,7 +355,7 @@ section.contact .card img{
     width :200px;
 }
 footer{
-    background-color : lightgoldenrodyellow;
+    background-color : #fbe7d3;
     height : 50px;
 }
 footer .medsos{
@@ -252,18 +373,5 @@ footer .medsos a:hover{
     box-shadow: 0px 0px 5px black;
     scale:105%;
     filter:drop-shadow(0px 0px 5px black);
-}
-.price{
-    width : flex;
-    height: flex;
-    margin: 0;
-    padding: 5px 10px;
-    color:black;
-    float: center;
-    font-size : 15px ;
-    font-family : "Trirong", serif;
-    box-shadow : 0px 0px 5px;
-    border-color : rgb(182, 176, 150);
-    background-color : orange;
 }
 

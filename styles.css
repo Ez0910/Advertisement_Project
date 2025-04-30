@@ -27,6 +27,10 @@ nav a{
     text-decoration :none;
     font-family : "Trirong", serif;
     font-size : 20px;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transform : translateY(15%) translateX(-20%);
 }
 nav a:hover{
     background-color: sandybrown;
@@ -84,7 +88,7 @@ section{
     background-color : #bd6f02;
 }
 section.home::before{
-    background:url("https://images.pexels.com/photos/3756498/pexels-photo-3756498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background : url("pexels-photo-3756498.jpg");
     background-size : cover;
     background-repeat : no-repeat ;
     background-attachment : fixed;
@@ -106,9 +110,29 @@ section.home .description{
     isolation : isolate;
     font-size :40px;
     font-family: "Cal Sans", sans-serif;
+    font-weight: 500;
+    font-style: solid;
+    margin-top :-100px;
+    animation :slide 3s;
+    transform :translateY(-10%);
+}
+section.home .description2{
+    text-align :right;
+    color : White;
+    margin-left : auto;
+    margin-right :80px;
+    width : 60%;
+    padding : 20px;
+    padding-top :none;
+    isolation : isolate;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size : 30px;
     margin-top :-100px;
+    animation :slide 3s;
+    transform :translateY(-10%);
 }
 section.home .welcome{
     font-size : 80px;
@@ -135,21 +159,24 @@ section.home .order{
     font-weight: 400;
     margin-left : auto;
     margin-right :105px;
+    animation :slide 3s;
+    transform :translateY(-10%);
 }
 section.home .order a{
     color:white;
     text-decoration : none;
 }
-.spinning{
-    isolation : isolate;
-    float : left;
-    display: block;
-    margin-left: auto;
-    clear: right;
+@keyframes slide{
+        0%{
+            transform : translateY(0%)
+        }
+        100%{
+            transform : translateY(-10%)
+        }
 }
 section.about{
     background-color : #edc951;
-    height : 850px ;
+    height : 800px ;
     padding-top : 100px;
 }
 section.about .aboutbox{
@@ -163,20 +190,58 @@ section.about .aboutbox .aboutcards{
     text-align :center;
     padding :12px;
     width : 500px;
-    height : 730px;
+    height : 635px;
     margin :20px;
     border-radius :20px;
-    transform :translateY(-7%);
+    transform :translateY(-13%);
+    box-shadow : 0px 0px 2px;
+}
+section.about .aboutbox .aboutcards:hover{
+    box-shadow :0 0 5px black;
+    transition : 1s;
+    filter:drop-shadow(0px 0px 5px black);
+    scale : 105%;
+}
+section.about .aboutbox .aboutcards:not(:hover){
+    box-shadow : 0px 0px 3px;
+    scale :100%;
+    filter :drop-shadow (0px 0px 2px);
+    transition :0.5s;
+}
+section.about .aboutbox .aboutcards2:hover{
+    box-shadow :0 0 5px black;
+    transition : 1s;
+    filter:drop-shadow(0px 0px 5px black);
+    scale : 105%;
+}
+section.about .aboutbox .aboutcards2:not(:hover){
+    box-shadow : 0px 0px 3px;
+    scale :100%;
+    filter :drop-shadow (0px 0px 2px);
+    transition :0.5s;
+}
+section.about .aboutbox .aboutcards3:hover{
+    box-shadow :0 0 5px black;
+    transition : 1s;
+    filter:drop-shadow(0px 0px 5px black);
+    scale : 105%;
+}
+section.about .aboutbox .aboutcards3:not(:hover){
+    box-shadow : 0px 0px 3px;
+    scale :100%;
+    filter :drop-shadow (0px 0px 2px);
+    transition :0.5s;
 }
 section.about .aboutbox .aboutcards2{
     background-color : whitesmoke;
     text-align :center;
     padding :12px;
     width : 500px;
-    height : 550px;
+    height : 520px;
     margin :20px;
     border-radius :20px;
-    transform :translateY(22%);
+    transform :translateY(5%);
+    box-shadow : 0px 0px 2px;
 }
 section.about .aboutbox .aboutcards3{
     background-color : gainsboro;
@@ -186,14 +251,15 @@ section.about .aboutbox .aboutcards3{
     height : 340px;
     margin :20px;
     border-radius :20px;
-    transform :translateY(-13%);
+    transform :translateY(-25%);
+    box-shadow : 0px 0px 2px;
 }
 section.about .aboutbox .aboutcards3 img{
     width :500px;
-    height : 330px;
+    height : 280px;
     object-fit :cover;
     object-position: 100% 0;
-    transform : translateY(19%);
+    transform : translateY(10%);
     border-radius : 12px;
 }
 section.about .aboutbox .aboutinfo{
@@ -226,35 +292,50 @@ section.about .aboutbox .aboutinfo3{
     padding-top : 120px;
 }
 section.about .aboutbox .aboutdetail1{
-    background-color :orange;
+    background-color :sandybrown;
     text-align :center;
     width :440px;
-    height :90px;
+    height :80px;
     border-radius :12px;
     margin-left:27px;
     margin-top:20px;
     position :absolute;
+    border:#edc951
 }
 section.about .aboutbox .aboutdetail{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size :60px;
-    transform : translateY(-48px);
+    font-size :50px;
+    transform : translateY(-40px);
 }
 section.about .aboutbox .aboutdetail2{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size :60px;
-    transform : translateY(-3px);
+    font-size :50px;
+    transform : translateY(3px);
+}
+section.about .about_us h1{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom : -100px;
+    margin-top : 20px;
+    font-size :50px;
+    background-color : orange;
+    border-radius : 20px;
+    width : 320px;
+    text-align :center;
+    color : black;
+    box-shadow : 0px 0px 10px;
 }
 section.about .aboutbox .aboutdetail3{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size :60px;
-    transform : translateY(0px);
+    font-size :50px;
+    transform : translateY(3px);
 }
 section{
     height :100vh;
@@ -264,7 +345,7 @@ section{
     background-color : #bd6f02;
 }
 section.product::before{
-    background:url("https://images.pexels.com/photos/4087610/pexels-photo-4087610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background:url("pexels-photo-4087610.jpeg");
     background-size :cover;
     background-repeat : no-repeat;
     background-attachment :fixed;
@@ -296,11 +377,12 @@ section.product .container .card img{
     border-radius : 6px;
 }
 section.product .container .card a{
-    color : orangered;
+    color : black;
     padding : 5px 20px;
     text-decoration :none;
     box-shadow :0px 0px 3px;
     border-radius : 20px;
+    background-color : orange;
 }
 section.product .container .card h2{
     font-family: "Cal Sans", sans-serif;
@@ -316,11 +398,12 @@ section.product .container .card h2{
     padding: 5px 10px;
     color:black;
     float: center;
-    font-size : 15px ;
+    font-size : 17px ;
     font-family : "Trirong", serif;
     box-shadow : 0px 0px 5px;
     border-color : rgb(182, 176, 150);
-    background-color : orange;
+    background-color : orangered;
+    text-decoration :solid;
 }
 section.product .container .card p{
     text-align :center;
@@ -329,30 +412,107 @@ section.product .container .card p{
     font-weight: 500;
     font-style: normal;
 }
+@keyframes shake{
+    0%{
+        transform : rotate(0deg)
+    }
+    25%{
+        transform : rotate(3deg)
+    }
+    50%{
+        transform : rotate(-3deg)
+    }
+    75%{
+        transform :rotate(1deg)
+    }
+    100%{
+        transform : rotate(0deg)
+    }
+}
 .card:hover{
     box-shadow :0 0 5px black;
     transition : 1s;
     filter:drop-shadow(0px 0px 5px black);
     scale : 110%;
+    animation:shake 0.5s;
 }
 .card:not(:hover){
     box-shadow :0 0 0px black;
     transition :1s;
     scale : 100%;
 }
+section.product .container .card a:hover{
+    box-shadow :0 0 5px black;
+    transition : 1s;
+    filter:drop-shadow(0px 0px 5px black);
+    scale : 110%;
+    animation:shake 0.5s;
+}
+section.product .container .card a:not(:hover){
+    transition : 1s;
+    scale : 100%;
+    animation:shake 0.5s;
+}
 section.contact{
     background-color : #fcce8e;
-    height :600px;
+    height :400px;
 }
-section.contact.card{
-     margin :auto;
-     color:white;
-     text-align:center;
-     padding-top :100px;
-     width :400px;
+.cardscroll{
+    position :relative;
+    width :550px;
+    height :350px;
+    box-shadow : 0px 0px 5px black;
+    overflow :hidden;
+    text-align :center;
+    border-radius :10px;
+    transition :0.5s;
+    margin-left :400px;
+    margin-right :auto;
+    
+    margin-top : 25px;
 }
-section.contact .card img{
-    width :200px;
+.cardscroll .image{
+    position :absolute;
+    width:100%;
+}
+.cardscroll .image img{
+    width : 550px;
+    height :350px;
+}
+.contact1desc{
+    position :absolute;
+    top :400px; 
+    padding :0px 10px;
+    transition :0.5s;
+    font-size :40px;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.cardscroll:hover .contact1desc{
+    top:0px;
+    transition :0.5s;
+}
+.cardscroll:hover .image img{
+    scale :1.2;
+    filter:opacity(10%);
+    transition :0.5s;
+}
+.cardscroll:not(:hover) .image img{
+    scale :1;
+    filter:opacity(100%);
+    transition :0.5s;
+}
+.contactdesc{
+    flex-direction:column;
+    justify-content:flex-start;
+    text-align :left;
+    transform : translateY(-110%) translateX(80%);
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size :30px;
 }
 footer{
     background-color : #fbe7d3;
